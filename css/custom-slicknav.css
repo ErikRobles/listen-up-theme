@@ -1,0 +1,27 @@
+.slicknav_menu {
+    height: 0px;
+    position: relative;
+    z-index: 3!important;
+}
+
+
+.slicknav_icon {
+    box-shadow: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* Show the SlickNav menu when the hamburger icon is clicked */
+.slicknav_menu.slicknav_open {
+    transition: all 0.5s ease-in-out;
+    z-index: 99!important;
+}
+
+.slicknav_nav {
+    min-height: 94vh!important;
+    max-height: 94vh; /* Adjust the value as needed */
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+}

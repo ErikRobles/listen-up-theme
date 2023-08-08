@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind utilities;
+
+:root {
+  --textFont: "Open Sans", sans-serif;
+  --secondaryFont: Raleway;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--textFont);
+}
+
+p {
+  font-family: var(--secondaryFont);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.site-header {
+  padding: 2rem 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Menu */
+
+.main-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-menu {
+    display: flex;
+  }
+  .main-menu .menu {
+    display: flex;
+    align-items: center;
+  }
+  .main-menu .menu li {
+    margin-right: 2rem;
+  }
+  .main-menu .menu li:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.main-menu a {
+  padding: 0.5rem 0.75rem;
+}
+
+.main-menu .current_page_item {
+  border-bottom: 2px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .slicknav_menu {
+    display: none;
+  }
+}
+
+.slicknav_btn {
+    background-color: transparent!important;
+}
+
+.slicknav_menutxt {
+    display: none!important;
+}
+
+.slicknav_nav a {
+    text-align: center;
+}
