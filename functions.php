@@ -211,7 +211,7 @@ function custom_theme_navbar_customize_register($wp_customize)
 
    // Add a custom setting for the Navbar/Header hover color (text color on hover)
    $wp_customize->add_setting('navbar_hover_color', array(
-      'default'           => '#ff0000', // Default hover color
+      'default'           => '#aaaaaa', // Default hover color
       'sanitize_callback' => 'sanitize_hex_color', // Sanitize the color value
    ));
 
@@ -224,7 +224,7 @@ function custom_theme_navbar_customize_register($wp_customize)
 
    // Add a custom setting for the Navbar/Header hover background color
    $wp_customize->add_setting('navbar_hover_bg_color', array(
-      'default'           => '#ff0000', // Default hover background color
+      'default'           => '#aaaaaa', // Default hover background color
       'sanitize_callback' => 'sanitize_hex_color', // Sanitize the color value
    ));
 
@@ -301,10 +301,10 @@ function custom_theme_footer_styles() {
    echo '.site-footer, .site-footer a { color: ' . get_theme_mod('footer_text_color', '#ffffff') . '; }';
    
    // Footer text hover color
-   echo '.site-footer a:hover { color: ' . get_theme_mod('footer_text_hover_color', '#ff0000') . '; }';
+   echo '.site-footer a:hover { color: ' . get_theme_mod('footer_text_hover_color', '#aaaaaa') . '; }';
    
    // Footer menu item hover background color
-   echo '.site-footer .main-menu li:hover { background-color: ' . get_theme_mod('footer_menu_hover_bg_color', '#ff0000') . '; }';
+   echo '.site-footer .main-menu li:hover { background-color: ' . get_theme_mod('footer_menu_hover_bg_color', '#aaaaaa') . '; }';
 
    echo '</style>';
 }
@@ -346,7 +346,7 @@ function custom_theme_slicknav_customize_register($wp_customize)
 
    // Add a custom setting for the SlickNav hover color (text color on hover)
    $wp_customize->add_setting('slicknav_hover_color', array(
-      'default'           => '#ff0000', // Default hover color
+      'default'           => '#aaaaaa', // Default hover color
       'sanitize_callback' => 'sanitize_hex_color', // Sanitize the color value
    ));
 
@@ -359,7 +359,7 @@ function custom_theme_slicknav_customize_register($wp_customize)
 
    // Add a custom setting for the SlickNav hover background color
    $wp_customize->add_setting('slicknav_hover_bg_color', array(
-      'default'           => '#ff0000', // Default hover background color
+      'default'           => '#aaaaaa', // Default hover background color
       'sanitize_callback' => 'sanitize_hex_color', // Sanitize the color value
    ));
 
@@ -389,8 +389,8 @@ function custom_theme_customizer_css()
       }
 
       .site-header a:hover {
-         color: <?php echo get_theme_mod('navbar_hover_color', '#ff0000'); ?>;
-         background-color: <?php echo get_theme_mod('navbar_hover_bg_color', '#ff0000'); ?>;
+         color: <?php echo get_theme_mod('navbar_hover_color', '#aaaaaa'); ?>;
+         background-color: <?php echo get_theme_mod('navbar_hover_bg_color', '#aaaaaa'); ?>;
       }
 
       /* SlickNav styles */
@@ -405,8 +405,8 @@ function custom_theme_customizer_css()
       }
 
       .slicknav_nav a:hover {
-         color: <?php echo get_theme_mod('slicknav_hover_color', '#ff0000'); ?>;
-         background-color: <?php echo get_theme_mod('slicknav_hover_bg_color', '#ff0000'); ?>;
+         color: <?php echo get_theme_mod('slicknav_hover_color', '#aaaaaa'); ?>;
+         background-color: <?php echo get_theme_mod('slicknav_hover_bg_color', '#aaaaaa'); ?>;
       }
 
       /* Additional styles for .slicknav_menu */
