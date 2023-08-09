@@ -238,7 +238,8 @@ function custom_theme_navbar_customize_register($wp_customize)
    // Add other customizer settings and controls for the Navbar/Header here
    // ...
 }
-function custom_theme_footer_customize_register($wp_customize) {
+function custom_theme_footer_customize_register($wp_customize)
+{
    // Add a custom section for Footer settings
    $wp_customize->add_section('footer_settings', array(
       'title' => __('Footer Settings', 'your-theme-textdomain'),
@@ -291,18 +292,19 @@ function custom_theme_footer_customize_register($wp_customize) {
 }
 add_action('customize_register', 'custom_theme_footer_customize_register');
 
-function custom_theme_footer_styles() {
+function custom_theme_footer_styles()
+{
    echo '<style type="text/css">';
-   
+
    // Footer background color
    echo '.site-footer { background-color: ' . get_theme_mod('footer_bg_color', '#000000') . '; }';
-   
+
    // Footer text color
    echo '.site-footer, .site-footer a { color: ' . get_theme_mod('footer_text_color', '#ffffff') . '; }';
-   
+
    // Footer text hover color
    echo '.site-footer a:hover { color: ' . get_theme_mod('footer_text_hover_color', '#aaaaaa') . '; }';
-   
+
    // Footer menu item hover background color
    echo '.site-footer .main-menu li:hover { background-color: ' . get_theme_mod('footer_menu_hover_bg_color', '#aaaaaa') . '; }';
 
@@ -458,8 +460,24 @@ function listenup_setup()
 
 add_action('after_setup_theme', 'listenup_setup');
 
-function custom_enqueue_customizer_reset_script() {
+function custom_enqueue_customizer_reset_script()
+{
    wp_enqueue_script('customizer-reset', get_template_directory_uri() . '/js/customizer-reset.js', array('customize-controls'), null, true);
 }
 add_action('customize_controls_enqueue_scripts', 'custom_enqueue_customizer_reset_script');
 
+// Create a Widget Zone
+function listenup_widgets()
+{
+   $h1_color = get_theme_mod('h1_color', '#000000');
+   register_sidebar(array(
+      'name' => 'Sidebar',
+      'id' => 'sidebar',
+      'description' => 'Add widgets here to appear in the sidebar',
+      'before_widget' => '<div class="widget mt-5" style="color: ' . $h1_color . '; ?>;">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+   ));
+}
+add_action('widgets_init', 'listenup_widgets');
