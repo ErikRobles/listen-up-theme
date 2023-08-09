@@ -485,9 +485,16 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.m-auto {
+  margin: auto !important;
+}
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.my-6 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 .my-8 {
   margin-top: 2rem !important;
@@ -496,23 +503,70 @@ video {
 .inline {
   display: inline !important;
 }
+.flex {
+  display: flex !important;
+}
 .contents {
   display: contents !important;
 }
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
+.max-w-\[80rem\] {
+  max-width: 80rem !important;
 }
-.text-lg {
-  font-size: 1.125rem !important;
-  line-height: 1.75rem !important;
+.items-center {
+  align-items: center !important;
 }
-.text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+.justify-center {
+  justify-content: center !important;
+}
+.gap-5 {
+  gap: 1.25rem !important;
+}
+.px-20 {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+}
+.py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.text-center {
+  text-align: center !important;
 }
 .outline {
   outline-style: solid !important;
+}
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
 }
 
 :root {
@@ -520,8 +574,8 @@ video {
   --secondaryFont: Raleway;
 }
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -533,17 +587,40 @@ h6 {
   font-family: var(--textFont);
 }
 
+/* Default font sizes for headings */
+h1 {
+  font-size: 2.8rem; /* Adjust as needed */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust as needed */
+}
+
+h3 {
+  font-size: 1.75rem; /* Adjust as needed */
+}
+
+h4 {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+h5 {
+  font-size: 1.25rem; /* Adjust as needed */
+}
+
+h6 {
+  font-size: 1rem; /* Adjust as needed */
+}
+
 p {
   font-family: var(--secondaryFont);
 }
-
 
 .logo {
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 1;
-  
 }
 
 .site-header {
@@ -594,13 +671,29 @@ p {
 }
 
 .slicknav_btn {
-    background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 .slicknav_menutxt {
-    display: none!important;
+  display: none !important;
 }
 
 .slicknav_nav a {
-    text-align: center;
+  text-align: center;
+}
+
+.featured_image {
+  margin-bottom: 2rem;
+}
+
+.page h1 {
+  margin-bottom: 2rem;
+}
+
+.page h2 {
+  margin-bottom: 1.5rem;
+}
+
+.site-footer .main-menu li:hover {
+  border-radius: 5px;
 }

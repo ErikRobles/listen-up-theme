@@ -19,7 +19,7 @@
                         <?php custom_theme_logo_size(); ?>
                     </a>
                 </div><!-- logo -->
-                <div class="text-white text-lg">
+                <div>
                     <?php
                     $args = array(
                         'theme_location' => 'main-menu',

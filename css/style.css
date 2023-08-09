@@ -1,13 +1,14 @@
 @tailwind base;
 @tailwind utilities;
+@tailwind components;
 
 :root {
   --textFont: "Open Sans", sans-serif;
   --secondaryFont: Raleway;
 }
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -19,17 +20,40 @@ h6 {
   font-family: var(--textFont);
 }
 
+/* Default font sizes for headings */
+h1 {
+  font-size: 2.8rem; /* Adjust as needed */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust as needed */
+}
+
+h3 {
+  font-size: 1.75rem; /* Adjust as needed */
+}
+
+h4 {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+h5 {
+  font-size: 1.25rem; /* Adjust as needed */
+}
+
+h6 {
+  font-size: 1rem; /* Adjust as needed */
+}
+
 p {
   font-family: var(--secondaryFont);
 }
-
 
 .logo {
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 1;
-  
 }
 
 .site-header {
@@ -80,13 +104,29 @@ p {
 }
 
 .slicknav_btn {
-    background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 .slicknav_menutxt {
-    display: none!important;
+  display: none !important;
 }
 
 .slicknav_nav a {
-    text-align: center;
+  text-align: center;
+}
+
+.featured_image {
+  margin-bottom: 2rem;
+}
+
+.page h1 {
+  margin-bottom: 2rem;
+}
+
+.page h2 {
+  margin-bottom: 1.5rem;
+}
+
+.site-footer .main-menu li:hover {
+  border-radius: 5px;
 }
