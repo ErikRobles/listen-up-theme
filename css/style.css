@@ -175,7 +175,6 @@ p {
 .card .card-content {
   padding: 3rem 0;
   text-align: center;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
