@@ -130,3 +130,63 @@ p {
 .site-footer .main-menu li:hover {
   border-radius: 5px;
 }
+
+.card {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 2rem);
+    position: relative;
+  }
+  .gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0,0,0,0.4) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0,0,0,0.4) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0,0,0,0.4) 100%
+    );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#66000000', GradientType=0);
+  }
+}
+.card img {
+  display: block;
+}
+
+.card .card-content {
+  padding: 3rem 0;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+  }
+}
+  
+ 

@@ -485,9 +485,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.order-1 {
-  order: 1 !important;
-}
 .m-auto {
   margin: auto !important;
 }
@@ -503,23 +500,20 @@ video {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
 }
-.mt-4 {
-  margin-top: 1rem !important;
-}
-.mt-5 {
-  margin-top: 1.25rem !important;
+.mb-0 {
+  margin-bottom: 0px !important;
 }
 .mb-5 {
   margin-bottom: 1.25rem !important;
 }
-.mb-2 {
-  margin-bottom: 0.5rem !important;
+.mb-\[4rem\] {
+  margin-bottom: 4rem !important;
 }
-.mb-4 {
-  margin-bottom: 1rem !important;
+.mt-5 {
+  margin-top: 1.25rem !important;
 }
-.mt-3 {
-  margin-top: 0.75rem !important;
+.mt-6 {
+  margin-top: 1.5rem !important;
 }
 .inline {
   display: inline !important;
@@ -533,26 +527,11 @@ video {
 .w-full {
   width: 100% !important;
 }
-.w-\[60\%\] {
-  width: 60% !important;
-}
-.w-\[40\%\] {
-  width: 40% !important;
-}
 .max-w-\[80rem\] {
   max-width: 80rem !important;
 }
-.flex-shrink-0 {
-  flex-shrink: 0 !important;
-}
-.flex-grow-0 {
-  flex-grow: 0 !important;
-}
 .flex-col {
   flex-direction: column !important;
-}
-.flex-wrap {
-  flex-wrap: wrap !important;
 }
 .items-center {
   align-items: center !important;
@@ -570,35 +549,23 @@ video {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
 }
-.py-6 {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-.px-5 {
-  padding-left: 1.25rem !important;
-  padding-right: 1.25rem !important;
-}
-.px-\[20rem\] {
-  padding-left: 20rem !important;
-  padding-right: 20rem !important;
-}
 .px-\[5rem\] {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
 }
+.py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
 .text-center {
   text-align: center !important;
 }
-.text-2xl {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
-}
-.text-xl {
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
-}
 .font-bold {
   font-weight: 700 !important;
+}
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 .outline {
   outline-style: solid !important;
@@ -766,99 +733,68 @@ p {
   border-radius: 5px;
 }
 
+.card {
+  margin-bottom: 4rem;
+}
+
 @media (min-width: 768px) {
-
-  .md\:order-1 {
-    order: 1 !important;
+  .card {
+    flex: 0 0 calc(50% - 2rem);
+    position: relative;
   }
-
-  .md\:mt-6 {
-    margin-top: 1.5rem !important;
+  .gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(0,0,0,0.4) 100%
+    );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#66000000', GradientType=0);
   }
+}
+.card img {
+  display: block;
+}
 
-  .md\:mt-8 {
-    margin-top: 2rem !important;
+.card .card-content {
+  padding: 3rem 0;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
   }
-
-  .md\:mt-12 {
-    margin-top: 3rem !important;
+  .md\:mb-\[4rem\] {
+    margin-bottom: 4rem !important;
   }
-
   .md\:w-\[40\%\] {
     width: 40% !important;
   }
-
   .md\:w-\[60\%\] {
     width: 60% !important;
   }
-
-  .md\:w-\[20\%\] {
-    width: 20% !important;
-  }
-
-  .md\:w-\[80\%\] {
-    width: 80% !important;
-  }
-
-  .md\:w-\[70\%\] {
-    width: 70% !important;
-  }
-
-  .md\:w-\[75\%\] {
-    width: 75% !important;
-  }
-
-  .md\:w-\[73\%\] {
-    width: 73% !important;
-  }
-
   .md\:w-\[72\%\] {
     width: 72% !important;
   }
-
   .md\:flex-row {
     flex-direction: row !important;
   }
-
-  .md\:px-10 {
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-  }
-
-  .md\:px-20 {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
-  }
-
-  .md\:pt-12 {
-    padding-top: 3rem !important;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem !important;
-    line-height: 2rem !important;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem !important;
-    line-height: 2.25rem !important;
+  .md\:pl-8 {
+    padding-left: 2rem !important;
   }
 }
-
-@media (min-width: 1024px) {
-
-  .lg\:px-20 {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
-  }
-
-  .lg\:px-\[20rem\] {
-    padding-left: 20rem !important;
-    padding-right: 20rem !important;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem !important;
-    line-height: 2.5rem !important;
-  }
-}
+  
+ 
